@@ -15,9 +15,9 @@ File Encryption Tool is a simple tool used to securely encrypt and decrypt your 
    cd price-comparison
    ```
 3. Run the main program:
-```bash
-  go run main.go
-```
+   ```bash
+   go run main.go
+   ```
 
 ## Commands
 1. help: Displays the help message and lists the available commands.
