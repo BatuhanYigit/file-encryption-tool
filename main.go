@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"file-encryption-tool/filecrypt"
 	"file-encryption-tool/helper"
 	"fmt"
 	"os"
@@ -20,6 +21,10 @@ func main() {
 		helper.HelpMessage()
 
 	case "encrypt":
+		fmt.Println("File path: ")
+		var filePath string
+		fmt.Scanln(&filePath)
+		encryptHandle(filePath)
 
 	}
 
@@ -35,7 +40,24 @@ func encryptHandle(filePath string) {
 
 	password := getPassword()
 	fmt.Println("Encrypting File...")
+	filecrypt.Encrypt(filePath, password)
+	fmt.Println("File successfully encrypting.")
 
+}
+
+func decryptHandle(filePath string) {
+	if len(filePath) == 0 {
+		fmt.Println("Missing path file")
+	}
+	if !validateFile(filePath) {
+		fmt.Println("File not found")
+	}
+
+	fmt.Println("Enter Password : ")
+	password, _ := term.ReadPassword(0)
+	fmt.Println("Decrypting File...")
+	filecrypt.Decrypt(filePath, password)
+	fmt.Println("File successfully decrypting.")
 }
 
 func validateFile(filePath string) bool {
