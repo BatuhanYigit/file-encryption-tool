@@ -25,7 +25,14 @@ func main() {
 		var filePath string
 		fmt.Scanln(&filePath)
 		encryptHandle(filePath)
+	case "decrypt":
+		fmt.Println("File path decrypt: ")
+		var filePath string
+		fmt.Scanln(&filePath)
+		decryptHandle(filePath)
 
+	default:
+		helper.HelpMessage()
 	}
 
 }
