@@ -2,10 +2,21 @@
 File Encryption Tool is a simple tool used to securely encrypt and decrypt your files.
 
 ## Usage
-Before running the project, make sure you have installed Go and have a working Go environment. Then, navigate to the terminal or command prompt in the project's main directory and run the following command:
 
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/BatuhanYigit/price-comparison.git
+   ```
+   
+2. Navigate to the project directory:
+
+   ```bash
+   cd price-comparison
+   ```
+3. Run the main program:
 ```bash
-go run main.go
+  go run main.go
 ```
 
 ## Commands
